@@ -12,6 +12,8 @@ body {
     align-items: center;
 }
 
+
+
 /* ===== Layout & Containers ===== */
 .message-container {
     display: flex;

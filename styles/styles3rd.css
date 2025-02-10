@@ -158,3 +158,31 @@ h1{
         transform: rotate(0deg);
     }
 }
+
+.button-play {
+    background-color: #ff7e8b;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    transition: 0.3s;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(255, 179, 186, 0.4);
+    animation: popIn 0.5s ease-in-out;
+    cursor: pointer;
+    position: absolute; /* Added to position the button */
+    bottom: 20px; /* Positioned at the bottom */
+    left: 50%; /* Centered horizontally */
+    transform: translateX(-50%); /* Centered horizontally */
+}
+
+.button-play:hover {
+    background-color: #ff4e5b;
+    box-shadow: 0 6px 20px rgba(255, 179, 186, 0.6);
+}
+
+/* Add keyframes for animations if not already present */
+@keyframes popIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}

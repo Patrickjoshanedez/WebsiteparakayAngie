@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles/styles2nd.css"> <!-- Corrected file path -->
 </head>
 <body>
-    <audio autoplay>
+    <audio id="background-music" autoplay>
         <source src="music.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
@@ -35,6 +35,10 @@
             <button id="yes-button" onclick="location.href='2.5page.html'">Yes</button>
             <button id="no-button">No</button>
         </div>
+    </div>
+
+    <div class="button-play" style="position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);">
+        <button id="play-music-button" onclick="document.getElementById('background-music').play()">Play Music</button>
     </div>
 
     <script src="scripts/scripts2nd.js"></script> <!-- Corrected file path -->
