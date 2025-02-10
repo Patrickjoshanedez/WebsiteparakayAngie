@@ -1,0 +1,182 @@
+/* ===== Global Styles ===== */
+body {
+    background: linear-gradient(to right, #ffb3ba, #ffdfba);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ===== Layout & Containers ===== */
+.message-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+}
+
+.container {
+    background-color: #baffc9; /* Pastel green */
+    width: 90%;
+    max-width: 350px;
+    height: 600px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    animation: fadeIn 1s ease-in-out;
+    margin-top: 100px;
+}
+
+/* ===== Headings & Text ===== */
+h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
+    color: rgb(255, 77, 106);
+    margin-bottom: 20px;
+    animation: popIn 0.5s ease-in-out, glow 1.5s infinite alternate;
+}
+
+/* ===== Buttons ===== */
+.btn-custom {
+    background-color: #ff7e8b;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    transition: 0.3s;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(255, 179, 186, 0.4);
+    animation: popIn 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.btn-custom:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(255, 223, 186, 0.6);
+}
+
+.btn-custom:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 10px rgba(255, 223, 186, 0.6);
+}
+
+/* ===== Floating Balloons & Bubbles ===== */
+.balloon {
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    animation: floatUp 5s ease-in-out forwards;
+}
+
+.bubble-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out 4s forwards;
+}
+
+.bubble {
+    width: 100px;
+    height: 100px;
+    background-color: #ffb3ba;
+    border-radius: 50%;
+    margin: 10px;
+    animation: float 4s ease-in-out infinite;
+}
+
+.bubble img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ===== Heart Animations ===== */
+.heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #ffb3ba;
+    clip-path: polygon(50% 0%, 100% 35%, 80% 100%, 50% 80%, 20% 100%, 0% 35%);
+    animation: spread 2s ease-in-out forwards;
+}
+
+.heart-trail {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #ffb3ba;
+    clip-path: polygon(50% 0%, 100% 35%, 80% 100%, 50% 80%, 20% 100%, 0% 35%);
+    animation: riseAndFade 2s ease-in-out forwards;
+}
+
+/* ===== Keyframe Animations ===== */
+@keyframes floatUp {
+    0% { bottom: -100px; opacity: 1; }
+    100% { bottom: 100vh; opacity: 0; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes popIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes glow {
+    from { text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3), 0 0 10px #ffb3ba; }
+    to { text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3), 0 0 20px #ffdfba; }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes spread {
+    0% { transform: scale(0.5); opacity: 1; }
+    100% { transform: scale(1.5) translateY(-50px); opacity: 0; }
+}
+
+@keyframes riseAndFade {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(-50px) scale(1.5); opacity: 0; }
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 1024px) {
+    .container { padding: 15px; }
+    h2 { font-size: 2rem; }
+    .btn-custom { padding: 10px 20px; font-size: 1rem; }
+}
+
+@media (max-width: 768px) {
+    .container { padding: 10px; }
+    h2 { font-size: 1.8rem; }
+    .btn-custom { padding: 8px 16px; font-size: 0.9rem; }
+}
+
+@media (max-width: 480px) {
+    .container { padding: 8px; }
+    h2 { font-size: 1.5rem; }
+    .btn-custom { padding: 6px 12px; font-size: 0.8rem; }
+}

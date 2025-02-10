@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day, Yangg!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body onload="showLove();">
+    <audio id="background-audio" loop>
+        <source src="song1.mp3" type="audio/mpeg" >
+        Your browser does not support the audio element.
+    </audio>
+    <div class="container">
+        <h2>Happy Valentine's Day, Yangg! ❤️</h2>
+        <img src="img/heart.gif" alt="Valentine Image" class="img-fluid rounded shadow-lg">
+        <form action="2ndpage.html">
+            <button class="btn btn-custom" onclick="redirectToPage()">Click Me</button>
+        </form>
+        <button class="btn btn-custom" onclick="playAudio()">Play Music</button>
+    </div>
+    <script src="scripts/scripts.js"></script>
+    <script>
+        function playAudio() {
+            const audio = document.getElementById('background-audio');
+            audio.play().catch(error => {
+                console.error('Audio playback failed:', error);
+            });
+        }
+    </script>
+</body>
+</html>

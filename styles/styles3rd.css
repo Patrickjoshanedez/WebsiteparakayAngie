@@ -1,0 +1,160 @@
+body{
+    background: #fadede;
+}
+
+.container{
+    margin-top: -150px;
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+h1{
+    font-family: 'Sacramento', cursive;
+    color: #FE7696;
+    font-size: 50px;
+}
+
+.letter{
+    
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.rose{
+    margin-top: 40px;
+    margin-left: 100px;
+    width: 200px;
+    height: 200px;
+    right: 0;
+    display: block;
+    animation: yidon 5s infinite;
+    transform: translateY(40%);
+    
+}
+
+.petal{
+    width: 50px;
+    height: 50px;
+    background: #fe7696;
+    border-radius: 0px 50%;
+    position: absolute;
+    box-shadow: 0 0 10px #D1123F;
+    z-index: 2;
+    transform-origin: bottom right; 
+    animation: zhankai2 10s infinite;
+    
+}
+
+.petal:nth-child(2){
+    transform-origin: right bottom;
+    transform: rotate(90deg);
+    background: #fe7696;
+    left: -10px;
+    animation: zhankai1 10s infinite;
+}
+
+.petal:nth-child(3){
+    width: 40px;
+    height: 40px;
+    left: 10px;
+    top: -20px;
+    z-index: 1;
+    background: #f03a64;
+    transform-origin: bottom right; 
+    animation: zhankai2 10s infinite;
+}
+
+.petal:nth-child(4){
+    transform: rotate(90deg);
+    width: 40px;
+    height: 40px;
+    left: 0px;
+    top: -20px;
+    z-index: 1;
+    background: #f03a64;
+    transform-origin: bottom right; 
+    animation: zhankai1 10s infinite;
+}
+
+.petal:nth-child(5){
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    left: 20px;
+    top: -30px;
+    z-index: 0;
+    background: #d1123f;
+    
+}
+
+.leaf{
+    position: absolute;
+    top: 120px;
+    left: -115px;
+}
+
+.stem{
+    width: 240px;
+    height: 40px;
+    background: transparent;
+    border: 8px solid #8ac78a;
+    border-color: #77a377 transparent transparent transparent;
+    border-radius: 50% 50%;
+    transform: rotate(100deg);
+}
+
+.leafs{
+    width: 50px;
+    height: 40px;
+    border-radius: 0px 50%;
+    background: #77a377;
+    position: absolute;
+    top: 0;
+    left: 100px;
+    z-index: 49;
+}
+
+.leafs:nth-child(2){
+    width: 40px;
+    height: 20px;
+    top: 40px;
+    left: 140px;
+    transform: rotate(120deg);
+}
+
+@keyframes yidon{
+    50%{
+        transform: translateY(35%);
+    }
+    100%{
+        transform: translateY(40%);
+    }
+}
+
+@keyframes zhankai1{
+    50%{
+        transform: rotate(110deg);
+    }
+    100%{
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes zhankai2{
+    50%{
+        transform: rotate(-20deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
